@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:map="clr-namespace:Syncfusion.Maui.Maps;assembly=Syncfusion.Maui.Maps"
+             xmlns:local="clr-namespace:GettingStarted_MAUI_Maps"
+             x:Class="GettingStarted_MAUI_Maps.MainPage">
+
+    <Grid>
+        <Grid.BindingContext>
+            <local:ViewModel/>
+        </Grid.BindingContext>
+        <map:SfMaps>
+            <map:SfMaps.Layer>
+                <map:MapShapeLayer x:Name="layer" ShapeDataField="STATE_NAME" DataSource="{Binding Data}" PrimaryValuePath="State" 
+                                   ShowDataLabels="True" ShowShapeTooltip="True" ShapeColorValuePath="ID">
+                    <!--Set Data Label-->
+                    <map:MapShapeLayer.DataLabelSettings>
+                        <map:MapDataLabelSettings DataLabelPath="StateCode" ></map:MapDataLabelSettings>
+                    </map:MapShapeLayer.DataLabelSettings>
+                    
+                    <!--Set Color mapping-->
+                    <map:MapShapeLayer.ColorMappings>
+                        <map:EqualColorMapping Color ="#d0b800" Value = "1" Text="NSW" />
+                        <map:EqualColorMapping Color = "#00d5cf" Value = "2"  Text="Queensland" />
+                        <map:EqualColorMapping Color ="#cf4eee" Value = "3" Text="Victoria" />
+                        <map:EqualColorMapping Color ="#4f93d8"  Value = "4" Text="Tasmania" />
+                        <map:EqualColorMapping Color = "#8b6adf" Value = "5" Text="WA"  />
+                        <map:EqualColorMapping Color ="#7bff67"  Value = "6" Text="SA" />
+                        <map:EqualColorMapping Color ="#ff4e42"  Value = "7" Text="NT" />
+                    </map:MapShapeLayer.ColorMappings>
+                    
+                    <!--Set Legend-->
+                    <map:MapShapeLayer.Legend>
+                        <map:MapLegend SourceType="Shape" Placement="Bottom" />
+                    </map:MapShapeLayer.Legend>
+                </map:MapShapeLayer>
+            </map:SfMaps.Layer>
+        </map:SfMaps>
+    </Grid>
+ 
+</ContentPage>
