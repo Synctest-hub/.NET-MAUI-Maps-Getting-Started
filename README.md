@@ -1,6 +1,6 @@
 # .NET MAUI Maps Getting Started
 
-This repository contains samples for how to get started with the [Syncfusion .NET MAUI Maps](https://help.syncfusion.com/maui/maps/getting-started) control. The .NET MAUI Maps control is a powerful data visualization component that displays statistical information for a geographical area. It has highly interactive and customizable features such as selection, tooltip, legends, markers, bubbles, and color mapping.
+This repository contains sample to get started with the [Syncfusion .NET MAUI Maps](https://help.syncfusion.com/maui/maps/getting-started) control. The .NET MAUI Maps control is a powerful data visualization component that displays statistical information for a geographical area. It has highly interactive and customizable features such as selection, tooltip, legends, markers, bubbles, and color mapping.
 
 ## Syncfusion controls
 
